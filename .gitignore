@@ -1,0 +1,8 @@
+[Bb]in/
+[Oo]bj/
+.vs/
+.vscode/
+api_output.log
+*.user
+*.suo
+*.sln.docstates
