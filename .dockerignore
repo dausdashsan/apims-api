@@ -1,0 +1,9 @@
+** [Bb]in/
+** [Oo]bj/
+.git/
+.vs/
+.vscode/
+api_output.log
+Dockerfile
+docker-compose.yml
+README.md
