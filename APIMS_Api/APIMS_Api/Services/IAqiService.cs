@@ -9,5 +9,6 @@ namespace APIMS_Api.Services
         Task<List<StationFeature>> GetByRegionAsync(string regionName);
         Task<List<StationFeature>> GetByClassAsync(string className);
         Task<List<StationFeature>> GetByStationIdAsync(string stationId);
+        Task<List<StationFeature>> GetByFiltersAsync(string? state = null, string? region = null, string? className = null, string? stationId = null);
     }
 }

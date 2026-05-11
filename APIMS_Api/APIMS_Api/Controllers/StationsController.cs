@@ -80,5 +80,24 @@ namespace APIMS_Api.Controllers
             if (!stations.Any()) return NotFound();
             return Ok(stations);
         }
+
+        /// <summary>
+        /// Filter stations by multiple criteria.
+        /// </summary>
+        /// <param name="state">Filter by state name (optional). Example: Selangor, Johor.</param>
+        /// <param name="region">Filter by region name (optional). Example: Northern, Central.</param>
+        /// <param name="className">Filter by air quality class (optional). Example: Good, Moderate.</param>
+        /// <param name="stationId">Filter by station ID (optional). Example: CA01R, CA02K.</param>
+        /// <returns>Stations matching all provided filters. If no filters provided, returns all stations.</returns>
+        [HttpGet("filter")]
+        public async Task<ActionResult<IEnumerable<StationFeature>>> GetByFilters(
+            [FromQuery] string? state = null,
+            [FromQuery] string? region = null,
+            [FromQuery] string? className = null,
+            [FromQuery] string? stationId = null)
+        {
+            var stations = await _aqiService.GetByFiltersAsync(state, region, className, stationId);
+            return Ok(stations);
+        }
     }
 }

@@ -14,6 +14,7 @@ builder.Services.AddControllers()
 builder.Services.AddHttpClient();
 builder.Services.AddMemoryCache();
 builder.Services.AddScoped<IAqiService, AqiService>();
+builder.Services.AddSingleton<IIncidentService, IncidentService>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

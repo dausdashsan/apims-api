@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIMS_Api", "APIMS_Api\APIMS_Api\APIMS_Api.csproj", "{f35efa27-28c6-4639-8343-445c1c42ccf1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIMS_Api", "APIMS_Api\APIMS_Api\APIMS_Api.csproj", "{F35EFA27-28C6-4639-8343-445C1C42CCF1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,5 +10,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F35EFA27-28C6-4639-8343-445C1C42CCF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F35EFA27-28C6-4639-8343-445C1C42CCF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F35EFA27-28C6-4639-8343-445C1C42CCF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F35EFA27-28C6-4639-8343-445C1C42CCF1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"d:\\\\Workspace\\\\APIMS_Api\\\\APIMS_Api\\\\APIMS_Api\" -Recurse -Depth 2)",
+      "Bash(Select-Object -Property Name, FullName, PSIsContainer)",
+      "Bash(dotnet build *)"
+    ]
+  }
+}

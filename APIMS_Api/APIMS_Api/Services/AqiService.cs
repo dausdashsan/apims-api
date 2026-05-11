@@ -72,5 +72,25 @@ namespace APIMS_Api.Services
             var all = await GetRawDataAsync();
             return all.Where(f => string.Equals(f.Attributes.STATION_ID, stationId, StringComparison.OrdinalIgnoreCase)).ToList();
         }
+
+        public async Task<List<StationFeature>> GetByFiltersAsync(string? state = null, string? region = null, string? className = null, string? stationId = null)
+        {
+            var all = await GetRawDataAsync();
+            var result = all;
+
+            if (!string.IsNullOrWhiteSpace(state))
+                result = result.Where(f => string.Equals(f.Attributes.STATE_NAME, state, StringComparison.OrdinalIgnoreCase)).ToList();
+
+            if (!string.IsNullOrWhiteSpace(region))
+                result = result.Where(f => string.Equals(f.Attributes.REGION_NAME, region, StringComparison.OrdinalIgnoreCase)).ToList();
+
+            if (!string.IsNullOrWhiteSpace(className))
+                result = result.Where(f => string.Equals(f.Attributes.CLASS, className, StringComparison.OrdinalIgnoreCase)).ToList();
+
+            if (!string.IsNullOrWhiteSpace(stationId))
+                result = result.Where(f => string.Equals(f.Attributes.STATION_ID, stationId, StringComparison.OrdinalIgnoreCase)).ToList();
+
+            return result;
+        }
     }
 }
